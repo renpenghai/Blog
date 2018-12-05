@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('Admin/Login','Admin\LoginController@Login');
+Route::get('Admin/Code','Admin\LoginController@Code');
+Route::get('Admin/GetCode','Admin\LoginController@GetCode');
