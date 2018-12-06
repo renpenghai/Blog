@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('Admin/Login','Admin\LoginController@Login');
-Route::get('Admin/Code','Admin\LoginController@Code');
-Route::get('Admin/GetCode','Admin\LoginController@GetCode');
+/*登录页面*/
+//登录
+Route::any('/','Admin\LoginController@Login');
+//验证码生成
+Route::get('Code','Admin\LoginController@Code');

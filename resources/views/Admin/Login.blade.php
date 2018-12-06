@@ -34,14 +34,19 @@
 <div class="page-container">
   <h1>博客后台管理</h1>
   <form action="" method="post">
-    <input type="text" name="username" class="username" placeholder="账号">
-    <input type="password" name="password" class="password" placeholder="密码">
-    <div style="white-space: nowrap;float:left;width: 305px;">
-      <div style="float: left"><input type="text" name="password" class="verification" placeholder="验证码"></div>
-
-      <div class="verification"></div>
+    {{csrf_field()}}
+    <input type="text" name="user_name" class="username" placeholder="账号">
+    <input type="password" name="user_pass" class="password" placeholder="密码">
+    <div style="white-space: nowrap;float:left;width: 305px;" >
+      <div style="float: left">
+        <input type="text" name="user_code" class="verification" placeholder="验证码">
+      </div>
+      <div class="imgverification">
+        <img src="{{url('Code')}}" onclick="this.src='{{url('Code')}}?'+Math.random()">
+      </div>
     </div>
-    <button type="submit">Sign me in</button>
+    <button type="submit">登录</button>
+    <div style="margin-top: 20px">{{session('msg')}}</div>
     <div class="error"><span>+</span></div>
   </form>
   <div class="connect">
