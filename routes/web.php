@@ -16,3 +16,6 @@
 Route::any('/','Admin\LoginController@Login');
 //验证码生成
 Route::get('Code','Admin\LoginController@Code');
+
+
+Route::get('index','Admin\LoginController@index');

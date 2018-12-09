@@ -26,4 +26,8 @@ class LoginController extends CommonController
         //echo  $_vc->getCode();
         $_SESSION['Login_Code'] = $_vc->GetCode();
     }
+    public  function  index()
+    {
+        return view('Admin.index');
+    }
 }
