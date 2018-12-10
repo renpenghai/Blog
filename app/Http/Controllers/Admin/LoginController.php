@@ -30,4 +30,8 @@ class LoginController extends CommonController
     {
         return view('Admin.index');
     }
+    public  function  one()
+    {
+        return view('Admin.one');
+    }
 }

@@ -19,3 +19,4 @@ Route::get('Code','Admin\LoginController@Code');
 
 
 Route::get('index','Admin\LoginController@index');
+Route::get('one','Admin\LoginController@one');
